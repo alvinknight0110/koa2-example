@@ -10,19 +10,32 @@ router.get('/', async (ctx, next) => {
  * @swagger
  * /string:
  *   get:
- *     description: Create Grid
+ *     description: Try get string
  *     tags:
- *       - Grid
+ *       - Index
  *     produces:
  *       - application/json
  *     responses:
  *       200:
- *         description: get a koa2 string
+ *         description: get a string
  */
 router.get('/string', async (ctx, next) => {
   ctx.body = 'koa2 string'
 })
 
+/**
+ * @swagger
+ * /json:
+ *   get:
+ *     description: Try get a json string
+ *     tags:
+ *       - Index
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         description: get a json string
+ */
 router.get('/json', async (ctx, next) => {
   ctx.body = {
     title: 'koa2 json'

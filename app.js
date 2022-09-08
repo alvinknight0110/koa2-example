@@ -10,13 +10,6 @@ const index = require('./routes/index');
 const users = require('./routes/users');
 const data = require('./routes/data');
 
-const fs = require('fs');
-const logs = require('./config').fileStorage.root;
-if (!fs.existsSync(logs)) {
-  console.log(logs);
-  fs.mkdirSync(logs);
-}
-
 // error handler
 onerror(app);
 
